@@ -13,9 +13,12 @@ void main() {
     mesAtual++;
   }
 
-  // predador
   double taxaDeReducao = 0.75;
+  
   while (mesAtual <= 24) {
+    adultos += jovens;
+    jovens = adultos;
+
     int totalCoelhos = jovens + adultos;
     int totalReduzido = (totalCoelhos * (1 - taxaDeReducao)).toInt();
 
